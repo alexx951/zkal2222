@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `ipssi_quizzeo`
 --
-
+create database ipssi_quizzeo;
+use ipssi_quizzeo;
 -- --------------------------------------------------------
 
 --
