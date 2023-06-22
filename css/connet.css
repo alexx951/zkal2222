@@ -1,0 +1,177 @@
+
+     .logo {
+        font-family: Arial, sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color:#00a6fb;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: cornflowerblue;
+
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    form {
+      margin-top: 20px;
+    }
+    
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 5px;
+      width: 200px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cadre{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px;
+        border: solid black 3px;
+        border-radius: 5px;
+        width: 400px;
+        background-color: #0077b6;
+
+
+    }
+    .log2{
+        position: absolute;
+        top:20%;
+        left:25%;
+        animation: anime3 4s linear infinite;
+
+
+
+    }
+    @keyframes anime3 {
+        
+        0%,100%{
+            transform:  translateY(-30px);
+        }
+        50%{
+            transform: translateY(30px);
+        }
+        
+    }
+    .log3{
+        position: absolute;
+        top:90%;
+        left:80%;
+        animation: anime4 4s linear infinite;
+
+
+
+    }
+    @keyframes anime4 {
+        
+        0%,100%{
+            transform:  translateY(-40px);
+        }
+        50%{
+            transform: translateY(40px);
+        }
+        
+    }
+
+    .log1{
+        position: absolute;
+        top:20%;
+        left:47%;
+        animation: anime5 4s linear infinite;
+
+
+
+    }
+    @keyframes anime5 {
+        
+        0%,100%{
+            transform : rotate(360deg);
+        }
+        100%{
+            transform : rotate(-360deg);
+        }
+        
+    }
+    .log5{
+        position: absolute;
+        top:20%;
+        left:80%;
+        animation: anime6 4s linear infinite;
+
+
+
+    }
+    @keyframes anime6 {
+        
+        0%,100%{
+            transform:  translateY(200px);
+        }
+        50%{
+            transform: translatex(-100px);
+        }
+        
+        
+    }
+    .log6{
+        position: absolute;
+        top:20%;
+        left:80%;
+        animation: anime7 4s linear infinite;
+
+
+
+    }
+    @keyframes anime7 {
+        
+        0%,100%{
+            transform:  translateY(200px);
+        }
+        50%{
+            transform: translatex(100px);
+        }
+        
+        
+    }
+    
+       body {
+        font-family: Arial, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  
+      h1 {
+        text-align: center;
+      }
+  
+      @media screen and (max-width: 992px) {
+        body {
+          padding: 10px;
+        }
+      }
+  
+      /* Styles pour les écrans de petite taille */
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    
+   
+  
