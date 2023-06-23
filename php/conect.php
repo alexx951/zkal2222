@@ -11,37 +11,33 @@ $p=$_post["password"];
 
 
      }
-    header('location: ../html/listequizz.php');
+   
     $username = $_POST['username'];
     
     $password = $_POST['password'];
-    $link = mysqli_connect("localhost", "root", "", "ipssi_quizzeo");
-  
+    $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+   
 
-    $sql = "SELECT * FROM usr_user WHERE usr_pseudo VALUES ('$username,'$password')"; 
-$link->query($sql);
-    echo "Nom d'utilisateur : " . $username . "<br>";
-  
-    
-    echo "Mot de passe : " . $password . "<br>";
-    // header('location: ../html/listequizz.php');
-}
 
-  if
-  ($result = mysqli_query($link, $sql)){
-      if(mysqli_num_rows($result) > 0) 
-      {
-header('location: ../html/listequizz.php');
-return true;
-      } 
-     
-else {
-          
-         
-
-echo"mauvais pseudo ou mot de passe ";
-return false;
+    $sql = "SELECT * FROM usr_user WHERE usr_pseudo ='$username' and usr_password = '$password'" ; 
+    $result = $link->query($sql);
+   
+     if
+     (mysqli_num_rows($result)>0){
+        
+        echo "ça marche"; 
+    header('location: ../html/listequizz.php');
+    return true;
       }
-  }
+         
+    else {
+              
+             
+    
+    echo"mauvais pseudo ou mot de passe ";
+    return false;
+          }
+      
+        }
 
 ?>
