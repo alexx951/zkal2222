@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creer un Quiz</title>
+</head>
+<body>
+  <h1>Creer un Quiz</h1>
+  
+  <form action="../php/traitement.php" method="POST">
+    <label for="difficulte">Difficulte :</label>
+    <select id="difficulte" name="difficulte">
+      <option value="facile">Facile</option>
+      <option value="moyen">Moyen</option>
+      <option value="difficile">Difficile</option>
+    </select>
+    
+    <br><br>
+    
+    <label for="categorie">Categorie:</label>
+    <input type="text" id="categorie" name="categorie" required>
+    
+    <br><br>
+    
+    <label for="question1">Question 1 :</label>
+    <input type="text" id="question1" name="questions[]" required>
+    <label for="reponse1">Reponse 1:</label>
+    <input type="text" id="reponse1" name="reponses[]" required>
+    <label for="reponse2">Reponse 2:</label>
+    <input type="text" id="reponse2" name="reponses[]" required>
+    <label for="reponse3">Reponse 3:</label>
+    <input type="text" id="reponse3" name="reponses[]" required>
+    <label for="bonnereponse">Bonne reponse:</label>
+    <select>
+        <option id="reponse1">reponse1</option>
+        <option id="reponse2">reponse2</option>
+        <option id="reponse3">reponse3</option>
+      </select>
+    
+    <br><br>
+    
+    <label for="question2">Question 2 :</label>
+    <input type="text" id="question2" name="questions[]" required>
+    <label for="reponse1">Reponse 1:</label>
+    <input type="text" id="reponse1" name="reponses[]" required>
+    <label for="reponse2">Reponse 2:</label>
+    <input type="text" id="reponse2" name="reponses[]" required>
+    <label for="reponse3">Reponse 3:</label>
+    <input type="text" id="reponse3" name="reponses[]" required>
+    <label for="bonnereponse">Bonne reponse:</label>
+    <select>
+        <option id="reponse1">reponse1</option>
+        <option id="reponse2">reponse2</option>
+        <option id="reponse3">reponse3</option>
+      </select>
+    
+    <br><br>
+    
+    <label for="question3">Question 3 :</label>
+    <input type="text" id="question3" name="questions[]" required>
+    <label for="reponse1">Reponse 1:</label>
+    <input type="text" id="reponse1" name="reponses[]" required>
+    <label for="reponse2">Reponse 2:</label>
+    <input type="text" id="reponse2" name="reponses[]" required>
+    <label for="reponse3">Reponse 3:</label>
+    <input type="text" id="reponse3" name="reponses[]" required>
+    <label for="bonnereponse">Bonne reponse:</label>
+    <select>
+        <option id="reponse1">reponse1</option>
+        <option id="reponse2">reponse2</option>
+        <option id="reponse3">reponse3</option>
+      </select>
+    
+    <br><br>
+    
+    <input type="submit" value="Creer le Quiz">
+  </form>
+</body>
+</html>
