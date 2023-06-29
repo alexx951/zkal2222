@@ -1,21 +1,13 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-<<<<<<< Updated upstream
+
     
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
  $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
 $sql = "INSERT INTO usr_user(usr_pseudo,usr_email,usr_password)
-=======
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $link = new mysqli("localhost", "root", "root", "ipssi_quizzeo");
-
-    $sql = "INSERT INTO usr_user(usr_pseudo,usr_email,usr_password)
->>>>>>> Stashed changes
 VALUES ('$username', '$email', '$password')";
 $link->query($sql);
 echo "Nom d'utilisateur : " . $username . "<br>";

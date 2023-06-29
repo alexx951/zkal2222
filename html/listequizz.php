@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quiz</title>
+
+<div class="cadre">
+   <form method="post">
+      <label for="id">id quizz:</label>
+      <br>
+      <input type="text" id="id" name="id" required>
+      <br>
+
+      <input type="submit" id="bouton" value="bouton">
+      <?php include "../php/ListeQuizz.php"; ?>
+
+     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <title>Quiz</title>
   <link rel="stylesheet" type="text/css" href="listequizz.css">
 </head>
 <body>
@@ -13,5 +37,5 @@
   </div>
 
   <script src="listequizz.js"></script>
-</body>
+</body> -->
 </html>
