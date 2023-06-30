@@ -1,3 +1,8 @@
+
+<DOCTYPE html>
+  <html> 
+
+<body>
 <?php
 include "../php/quizz.php";
 session_start();
@@ -10,10 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $questionarray = $monQuiz->Getquestions();
     foreach(  $questionarray as $questions)
     { 
-      echo  "texte des questions " .  $questions->GetTexte();
+      echo  $questions->GetTexte() . "<br>";
+      echo  $questions->afficherReponses() . "<br>";
 
     }
+   
+
 }
 
 
 ?>
+<?php
+$listerep[] = $questions->afficherReponses();
+for($i=0; $i<9; $i++){ ?>
+
+
+<input type="checkbox" name="[]" value="Tarte aux prunes" /><?php echo $listerep[$i]; ?><br />
+<?php }?>
+</body>
+  </html>

@@ -3,7 +3,7 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $id = $_POST['id'];
-    $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+    $link = new mysqli("localhost", "root", "root", "ipssi_quizzeo");
     $sql = "SELECT que_id, que_label, que_difficulte, qui_id FROM que_question WHERE qui_id ='$id'" ; 
     $result= $link->query($sql);
     

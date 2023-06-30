@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `cho_choice` (
   `cho_goodanswer` tinyint(1) NOT NULL,
   `que_id` int NOT NULL,
   PRIMARY KEY (`cho_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `cho_choice`
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `que_question` (
   `que_datecreation` date NOT NULL,
   `qui_id` int NOT NULL,
   PRIMARY KEY (`que_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `que_question`
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `qui_quizz` (
   `qui_difficulte` int NOT NULL,
   `date_creation` date NOT NULL,
   PRIMARY KEY (`qui_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `qui_quizz`
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `rol_role` (
   `rol_id` int NOT NULL AUTO_INCREMENT,
   `rol_name` varchar(50) NOT NULL,
   PRIMARY KEY (`rol_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `rol_role`
@@ -189,7 +189,7 @@ CREATE TABLE IF NOT EXISTS `usr_qui` (
   `usr_id` int NOT NULL,
   `qui_id` int NOT NULL,
   `usr_qui_score` int NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `usr_qui`
@@ -239,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `usr_user` (
   `rol_id` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`usr_id`),
   KEY `role_id` (`rol_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Déchargement des données de la table `usr_user`

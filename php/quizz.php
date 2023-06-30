@@ -20,7 +20,7 @@ $this->questions[] = $question;
         }
 
  public function LoadData( ) {
-    $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+    $link = new mysqli("localhost", "root", "root", "ipssi_quizzeo");
 $sql = "SELECT que_id, que_label, que_difficulte, qui_id FROM que_question WHERE qui_id ='$this->id'" ; 
 $result= $link->query($sql);
 
@@ -38,7 +38,7 @@ else
 }
 
  
-$link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+$link = new mysqli("localhost", "root", "root", "ipssi_quizzeo");
 foreach($this->questions as $questions)
 {    
  

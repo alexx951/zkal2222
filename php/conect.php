@@ -12,7 +12,7 @@ $p=$_post["password"];
                            
 $username = $_POST['username'];
 $password = $_POST['password'];
-$link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+$link = new mysqli("localhost", "root", "root", "ipssi_quizzeo");
 // if ($link -> connect_errno >0)
 //  {
 // echo"failed to connect to sql" . mysqli_connect_errno();
@@ -23,7 +23,7 @@ $result = $link->query($sql);
    
 if(mysqli_num_rows($result)>0)
  { 
-header('location: ../html/listequizz.php');
+header('location: ../html/jouer.php');
 return true;
  }
          
