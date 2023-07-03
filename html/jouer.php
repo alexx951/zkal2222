@@ -3,28 +3,19 @@
 <head>
   <title>Quiz</title>
   <link rel="stylesheet" href="">
+
 </head>
+
 <body>
-  <h1>Choisissez une categorie de quiz :</h1>
-  <div class="cadre">
-   <form method="post">
-   <label for="id">Choisissez une categorie:</label>
-
-<select name="id" id="id" multiple>
-  <option value="1">Sport</option>
-  <option value="2">Histoire</option>
-  <option value="3">Musique</option>
+  <h1>Choisissez une catégorie de quiz :</h1><br>
+ 
+ 
   
-  
-</select>
-      <input type="submit" id="bouton" value="valider">
-      
-      <br>
-      <?php include "../php/ListeQuizz.php"; ?> 
+   <form method="post" action="../php/ListeQuizz.php"  > 
+    <input type="submit" name="btn" value="1" /> <img src="../photo/histoire.png" alt="histoire"> 
+    <input type="submit" name="btn" value="2" /> <img src="../photo/sport.png" alt="sport"> 
+    <input type="submit" name="btn" value="3" /> <img src="../photo/piano.png" alt="piano">  
+ </form>
 
-     </form>
-
-
-  <script src="../js/listequizz.js"></script>
 </body>
 </html>

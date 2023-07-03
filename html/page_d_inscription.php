@@ -6,7 +6,7 @@
 </head>
 <body>
   <h2>Formulaire d'inscription</h2>
-  <form method="post" action="../php/inscription.php" action="../php/inscription.php">
+  <form method="post" action="../php/inscription.php"  >
     <label for="username">Nom d'utilisateur:</label>
     <input type="text" id="username" name="username" required>
 

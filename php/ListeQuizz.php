@@ -3,34 +3,45 @@
   <html> 
 
 <body>
+<form method="post">
 <?php
 include "../php/quizz.php";
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if (isset($_POST['btn']))
+  { 
+    $id = $_POST['btn'];
     
-    $id = $_POST['id'];
+    $_SESSION['qui_id'] =   $id ;
     $monQuiz = new Quiz($id);
     $monQuiz->LoadData(); 
-
-    $questionarray = $monQuiz->Getquestions();
-    foreach(  $questionarray as $questions)
-    { 
-      echo  $questions->GetTexte() . "<br>";
-      echo  $questions->afficherReponses() . "<br>";
-
-    }
+  }
+  else
+  {  
    
+    $usr_id = $_SESSION['usr_id'] ; 
+    $qui_id =   $_SESSION['qui_id']  ; 
 
-}
+    $usr_qui_score = 300; //a calculer 
+    $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+    $sql = "CALL `usrAddScore`('$usr_id','$qui_id','$usr_qui_score')" ;
+    header('location: ../html/jouer.php');
+    $link->query($sql);
 
-
-?>
-<?php
-$listerep[] = $questions->afficherReponses();
-for($i=0; $i<9; $i++){ ?>
-
-
-<input type="checkbox" name="[]" value="Tarte aux prunes" /><?php echo $listerep[$i]; ?><br />
-<?php }?>
+  }
+} 
+?> 
+<input type="submit" id="bouton" value="participer">
+</form>
+ <script type="text/javascript">
+  function  Showdiv(id)
+    {
+        id = id+1;
+        id = "blockquestion"+ id ;
+        divInfo = document.getElementById (id);  
+        divInfo.style.display = 'block';
+ 
+    } 
+  </script> 
 </body>
-  </html>
+</html>

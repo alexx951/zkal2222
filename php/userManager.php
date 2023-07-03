@@ -64,31 +64,3 @@ if(isset($_POST["submit"]))
 
 ?>
 
-connecter(identifiant et password ): bool 
-select (identifiant) : total user 
-creer un user(identifiant,email,mot de passe et role):bool ou id 
-modifier son role (user id et role id)
-manager quizz(select des quizz)
-
-
-
-
-
-reponse_manager (good_label, label)
-ad(id_reponse)
-select 
-all quetion
-
-quizz manager
-select list: all quizz
-ad:titre, difficulter , creation (id_quizz)
-
-modification(total quizz,id_quizz):bool ou id 
-
-question_manager
-select all question(id_quizz):all question 
-ad question:label, difficulter , creation
-
-choice manager 
-select liste:question 
-ad choise: label, goodanswer,id                            
