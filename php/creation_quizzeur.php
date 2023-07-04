@@ -1,38 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <h1>creation quizz</h1>  
-  <div class= "toto">
-    <form methode="POST">
-        <label>titre</label>
-        <input type="texte" name="titre" required=""> <br> 
-        <label>difficulter</label>
-        <select name="difficulter">
-            <option value="1">facile</option>
-             <option value="2">moyen</option>
-             <option value="3">difficile</option>
-        </select>
-        <div id="question"><div id="creation"></div></div>
-     <input type="submit" name="submit" value="submit"><br>
+<?php
+ 
+echo 'test';
+echo $_SERVER['REQUEST_METHOD'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $titre = $_POST['titre']; 
+        $difficulte= $_POST['difficulter'];
+        $NameQuestion = $_POST ['name'];
+        $Namereponse1 = $_POST ['Namereponse1']; 
+        $Namereponse2 = $_POST ['Namereponse2'];
+        $Namereponse3 = $_POST ['Namereponse3'];
+
+       
+     $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
+     $sql = "CALL `addquizz`('$titre',' $difficulte','$NameQuestion','$Namereponse1',' $Namereponse2',' $Namereponse3')" ;
      
-
-
-
-    </form>
-    <button  onclick = "addquestion()">ajouter</button>
-    <button  onclick = "deletequestion()">supprimer</button>
-
-  </div>
-
-    <script src="../js/creation_quizzeur.js"></script>
+     $link->query($sql);
+     header("Location:../html/jouer.php");
+   }
+ 
+?>  
 
 
 
 
-</body>
-</html>
+ 

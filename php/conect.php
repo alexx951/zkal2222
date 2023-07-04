@@ -29,6 +29,19 @@ if(mysqli_num_rows($result)>0)
   }
 
   $_SESSION['usr_id'] =  $usr_id; 
+
+ $sqlquizzs  = "SELECT qui_id, qui_title FROM `qui_quizz`" ; 
+ $resultquizzs = $link->query($sql);
+   
+if(mysqli_num_rows( $resultquizzs)>0)
+ { 
+  while($rowquizzs= $resultquizzs->fetch_assoc())
+  {
+   
+    echo "<a href=../php/ListeQuizz.php ?id=".$rowquizzs['quizz_id'].">".$rowquizzs['title']."</a> ";
+ 
+  }
+
 header('location: ../html/jouer.php');
 return true;
  }
@@ -40,5 +53,5 @@ return false;
  }
       
 }
-
+}
 ?>

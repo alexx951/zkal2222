@@ -11,7 +11,7 @@ y=i_q;
 }
 y++;
 var creation = document.getElementById("creation").innerHTML;
-creation += '<div class="divquestion"><br><label>Question '+y+'</label><br><input type="texte" name="qustion'+y+'" placeholder ="entrer la question" required=""><br><label>Reponse </label><br><input type="texte" name="good'+y+'" placeholder ="bonne reponse" required=""><br><input type="texte" name="badrep'+y+'-1" placeholder ="mauvaises reponses" required=""><br><input type="texte" name="badrep'+y+'-2" placeholder ="mauvaises reponses" required=""><br></div>'
+creation += '<div class="divquestion"><br><label>Question '+y+'</label><br><input type="texte" name="name'+y+'" placeholder ="entrer la question" required=""><br><label>Reponse </label><br><input type="texte" name="good'+y+'" placeholder ="bonne reponse" required=""><br><input type="texte" name="badrep'+y+'-1" placeholder ="mauvaises reponses" required=""><br><input type="texte" name="badrep'+y+'-2" placeholder ="mauvaises reponses" required=""><br></div>'
 document.getElementById("creation").innerHTML = creation;
 
 }
