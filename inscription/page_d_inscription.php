@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Formulaire d'inscription</title>
-  <link rel="stylesheet" href="../css/inscription.css">
+  <link rel="stylesheet" href="../inscription/inscription.css">
 </head>
 <body>
   <h2>Formulaire d'inscription</h2>
-  <form method="post" action="../php/inscription.php"  >
+  <form method="post" action="../inscription/inscription.php"  >
     <label for="username">Nom d'utilisateur:</label>
     <input type="text" id="username" name="username" required>
 

@@ -4,7 +4,7 @@
 <body>
   <h1>creation quizz</h1>  
   <div>
-  <form method="post" action="../php/creation_quizzeur.php">
+  <form method="post" action="../creatquizz/creation_quizzeur.php">
         <label>titre</label>
         <input type="texte" name="titre" required=""> <br> 
         <label>difficulter</label>

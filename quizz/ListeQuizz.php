@@ -1,11 +1,13 @@
 
 <DOCTYPE html>
   <html> 
-
+<head>
+  <link rel="stylesheet" href="../quizz/listequizz.css">
+</head>
 <body>
 <form method="post">
 <?php
-include "../php/quizz.php";
+include "../quizz/quizz.php";
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['btn']))
@@ -25,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usr_qui_score = 300; //a calculer 
     $link = new mysqli("localhost", "root", "", "ipssi_quizzeo");
     $sql = "CALL `usrAddScore`('$usr_id','$qui_id','$usr_qui_score')" ;
-    header('location: ../html/jouer.php');
+    header('location: ../quizz/jouer.php');
     $link->query($sql);
 
   }
