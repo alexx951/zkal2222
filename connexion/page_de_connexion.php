@@ -44,7 +44,7 @@
       <input type="submit" id="bo" value="Se connecter">
      
     </form>
-    <a href ="page_d_inscreption.php"> Vous n'avez pas de compte? S'inscrire</a>
+    <a href ="../inscription/page_d_inscription.php"> Vous n'avez pas de compte? S'inscrire</a>
   </div>
  
   <?php include "../connexion/conect.php"; ?>

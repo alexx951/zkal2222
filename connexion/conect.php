@@ -4,10 +4,9 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if (isset($_post["bo"])) 
-  {
-        
-$u=$_post["user"];
-$p=$_post["password"];
+  {  
+    $u=$_post["user"];
+    $p=$_post["password"];
  }
                       
 $username = $_POST['username'];
@@ -26,36 +25,11 @@ if(mysqli_num_rows($result)>0)
   while($row1=$result->fetch_assoc())
   {
     $usr_id =$row1["usr_id"] ;
-    $rol_id =$row1["rol_id"] ;
-   
-    
-  }
-  if( $rol_id=+2){
-echo "creation de quizz";
-     echo "<a href=../html/creationquizz.php value='button'name='nouveau quizz'></a>";
- 
-}
-else{
-
-  echo"tu ne peux pas crer de quizz";
-}
-
-
-  }
-
+    $rol_id =$row1["rol_id"] ; 
+  } 
   $_SESSION['usr_id'] =  $usr_id; 
-
- $sqlquizzs  = "SELECT qui_id, qui_title FROM `qui_quizz`" ; 
- $resultquizzs = $link->query($sql);
+  $_SESSION['rol_id'] =  $rol_id;  
    
-if(mysqli_num_rows( $resultquizzs)>0)
- { 
-  while($rowquizzs= $resultquizzs->fetch_assoc())
-  {
-   
-    echo "<a href=../quizz/ListeQuizz.php ?id=".$rowquizzs['quizz_id'].">".$rowquizzs['title']."</a> ";
-   
-  }
 
 header('location: ../quizz/jouer.php');
 return true;
