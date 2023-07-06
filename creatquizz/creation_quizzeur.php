@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      $sql = "CALL `addquizz`('$titre',' $difficulte','$NameQuestion','$Namereponse1',' $Namereponse2',' $Namereponse3')" ;
      
      $link->query($sql);
-     header("Location:../quizz/jouer.php");
+     header("Location:../quizz/joueur.php");
    }
  
 ?>  

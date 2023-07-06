@@ -4,7 +4,8 @@
 <html>
 <head>
   <title>Quiz</title>
-  <link rel="stylesheet" href="../quizz/listequizz.css">
+  <!-- <link rel="stylesheet" href="../quizz/listequizz.css"> -->
+  <link rel="stylesheet" href="../quizz/jouer.css">
 
 </head>
 
@@ -37,8 +38,9 @@ else{
     echo "Liste des quizz <br> ";
    while($rowquizzs= $resultquizzs->fetch_assoc())
    { 
-     echo "<a href=../quizz/ListeQuizz.php?id=".$rowquizzs['qui_id'].">".$rowquizzs['qui_title']."</a><br> ";
     
+     echo "<a href=../quizz/ListeQuizz.php?id=".$rowquizzs['qui_id'].">".$rowquizzs['qui_title']."</a><br> ";
+     echo "<a href=../creatquizz/suppression.php?delete=".$rowquizzs['qui_id']."?>Supprimer</a>";
    }
 
 

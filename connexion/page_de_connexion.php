@@ -5,7 +5,7 @@
  
 <head>
   <title>Quizzeo</title>
-  <link rel="stylesheet" href="../css/connet.css">
+  <link rel="stylesheet" href="../connexion/connet.css">
 </head>
 <body>
   <div class="logo">QUIZZEO</div>
