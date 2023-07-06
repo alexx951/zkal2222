@@ -50,7 +50,7 @@ if (!empty($result) && $result->num_rows > 0)
             {
                 $reponse=new reponse($row1["cho_label"],$row1["cho_id"], $row1["cho_goodanswer"], $row1["que_id"]);  
                 $question->ajouterReponse($reponse) ;
-                echo '<br> '.$reponse->getTexte().' <input type=\'radio\' onclick="Showdiv('.   $row1["que_id"]  .' );"  name=\"radio'.  $row1["que_id"] .'     \" value="'.$reponse->getId().'" />';
+                echo '<br> '.$reponse->getTexte().' <input type=\'radio\' onclick="Showdiv('.   $row1["que_id"]  .','. $row1["cho_goodanswer"] .');"  name=\"radio'.  $row1["que_id"] .'     \" value="'.$reponse->getId().'" />';
             }
         }
         else
