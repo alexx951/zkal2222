@@ -1,6 +1,6 @@
 <?php
  
-echo 'test';
+
 echo $_SERVER['REQUEST_METHOD'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $titre = $_POST['titre']; 
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      $sql = "CALL `addquizz`('$titre',' $difficulte','$NameQuestion','$Namereponse1',' $Namereponse2',' $Namereponse3')" ;
      
      $link->query($sql);
-     header("Location:../quizz/joueur.php");
+     header("Location:../quizz/jouer.php");
    }
  
 ?>  

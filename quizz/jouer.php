@@ -18,7 +18,7 @@
    $usr_id = $_SESSION['usr_id'] ; 
    $qui_id =   $_SESSION['qui_id']  ; 
 
-    echo $rol_id;
+   
   if( $rol_id==2){
      echo "creation de quizz<br>";
      echo "<a href=../creatquizz/creationquizz.php value='button'name='nouveau quizz'>nouveau quizz</a><br>";
@@ -35,12 +35,15 @@ else{
     
  if(mysqli_num_rows( $resultquizzs)>0)
   { 
+    $id=1;
+    
     echo "Liste des quizz <br> ";
    while($rowquizzs= $resultquizzs->fetch_assoc())
    { 
-    
-     echo "<a href=../quizz/ListeQuizz.php?id=".$rowquizzs['qui_id'].">".$rowquizzs['qui_title']."</a><br> ";
+    echo "<a href=../quizz/ListeQuizz.php?id=".$rowquizzs['qui_id'].">".$rowquizzs['qui_title']."</a><br> ";
+    if($id>3)
      echo "<a href=../creatquizz/suppression.php?delete=".$rowquizzs['qui_id']."?>Supprimer</a>";
+     $id=$id+1;
    }
 
 
