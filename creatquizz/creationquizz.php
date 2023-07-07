@@ -5,6 +5,7 @@
   <h1>creation quizz</h1>  
   <div>
   <form method="post" action="../creatquizz/creation_quizzeur.php">
+  <link rel="stylesheet" href="../creatquizz/style.css">
         <label>titre</label>
         <input type="texte" name="titre" required=""> <br> 
         <label>difficulter</label>
